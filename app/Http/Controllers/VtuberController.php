@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vtuber;
-use App\Models\FanclubMember;
+use App\Models\FanCertificate;
 
 class VtuberController extends Controller
 {
@@ -22,6 +22,6 @@ class VtuberController extends Controller
 
         return view('vtuber.show', compact('vtuber'));
     }
-    
+
 }
 
