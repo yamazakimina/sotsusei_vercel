@@ -9,7 +9,7 @@
                             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{{ $vtuber->name }}</h1>
                             <p class="mb-8 leading-relaxed">{{ $vtuber->self_introduction }}</p>
                             <div class="flex justify-center">
-                              <a href="{{ url('/dashboard_3') }}"><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">ファンになる</button></a>
+                              <a href="{{ route('fan-certificates.create', [ 'vtuberId' => $vtuber->id ]) }}"><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">ファンになる</button></a>
                             </div>
                           </div>
                         </div>
@@ -18,4 +18,3 @@
             </div>
         </div>
     </x-app-layout>
-    
