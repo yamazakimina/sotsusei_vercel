@@ -104,7 +104,7 @@ class FanCertificatesController extends Controller
         $certificate->support_comment = $supportComment;
         $certificate->save();
 
-        return redirect("fan-certificates.show", [ 'id' => $certificate->id ])->with('success', '会員証が発行されました！');
+        return redirect()->route('fan-certificates.show', [ 'id' => $certificate->id ])->with('success', '会員証が発行されました！');
     }
 
     /**
@@ -155,6 +155,6 @@ class FanCertificatesController extends Controller
         $certificate->support_comment = $supportComment;
         $certificate->save();
 
-        return redirect("fan-certificates.show", [ 'id' => $certificate->id ])->with('success', '会員証が更新されました！');
+        return redirect()->route('fan-certificates.show', [ 'id' => $certificate->id ])->with('success', '会員証が更新されました！');
     }
 }
