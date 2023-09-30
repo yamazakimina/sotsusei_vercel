@@ -84,7 +84,7 @@ class FanCertificatesController extends Controller
             throw new Exception("Not found the vtuber, id:{$vtuberId}");
         }
 
-        $existed = Vtuber::query()
+        $existed = FanCertificate::query()
             ->where('user_id', $userId)
             ->where('vtuber_id', $vtuberId)
             ->exists();
