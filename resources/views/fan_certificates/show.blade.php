@@ -26,6 +26,11 @@
                         {{ $certificate->support_comment }}
                     </div>
                 </div>
+                <div class="p-2 w-full justify-center">
+                    <a href="{{ route('fan-certificates.edit', [ 'id' => $certificate->id ]) }}">
+                        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">ファン証明書を更新する</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
