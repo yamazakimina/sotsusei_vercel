@@ -1,8 +1,13 @@
 <x-app-layout>
   <x-slot name="header">
-      <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-          {{ __('Vtuber一覧') }}
-      </h2> 
+    <div class="flex items-center">
+        <h2 class="font-semibold text-xl leading-tight mr-4">
+            <a href="{{ route('vtuber.index') }}" class="{{ request()->is('vtuber*') || !request()->is('fan-certificates*') ? 'text-blue-500' : 'text-gray-800 dark:text-gray-200' }}">{{ __('Vtuber一覧') }}</a>
+        </h2>
+        <h2 class="font-semibold text-xl leading-tight">
+            <a href="{{ route('fan-certificates.index') }}" class="{{ request()->is('fan-certificates*') ? 'text-blue-500' : 'text-gray-800 dark:text-gray-200' }}">{{ __('ファンカード一覧') }}</a>
+        </h2>
+    </div>
   </x-slot>
 
   <div class="py-12">
@@ -49,4 +54,3 @@
       </div>
   </div>
 </x-app-layout>
-  

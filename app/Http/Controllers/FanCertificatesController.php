@@ -21,7 +21,8 @@ class FanCertificatesController extends Controller
          */
         $certificates = FanCertificate::query()
             ->where('user_id', Auth::id())
-            ->orderBy('created_at', 'desc');
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         return view('fan_certificates/index', compact('certificates'));
     }
